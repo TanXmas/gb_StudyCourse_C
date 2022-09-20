@@ -14,7 +14,7 @@ int i = 1;
 
 while (i < 9)
 {
-    maxx = max(array[i],maxx);
+    maxx = max(array[i], maxx);
     i += 1;
 }
 
