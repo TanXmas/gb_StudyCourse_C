@@ -2,4 +2,4 @@
 
 Console.Write("Введите целое число: ");
 int userNumber = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Квадрат числа {userNumber} равет {Math.Pow(userNumber, 2)}");
+Console.WriteLine($"Квадрат числа {userNumber} равен {Math.Pow(userNumber, 2)}");
