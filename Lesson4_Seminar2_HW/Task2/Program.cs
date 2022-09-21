@@ -5,24 +5,21 @@
 
 void getThirdDigitFromNumber(int number)
 {
-    int countDigit = 0;
-    int numberForCount = number;
-    while (numberForCount > 0)
+    while (number > Math.Pow(10,3))
     {
-        countDigit += 1;
-        numberForCount /= 10;
+        number /= 10;
     }
     
-    if (countDigit < 3)
+    if (number < Math.Pow(10,2))
     {
         Console.WriteLine("третьей цифры нет");
     }
     else
     {
-        Console.WriteLine(number / (int) Math.Pow(10, countDigit-3) % 10);
+        Console.WriteLine(number % 10);
     }
 }
 
-int randomNumber = new Random().Next(1, 1000000);
+int randomNumber = new Random().Next(1, 10000);
 Console.WriteLine(randomNumber);
 getThirdDigitFromNumber(randomNumber);
