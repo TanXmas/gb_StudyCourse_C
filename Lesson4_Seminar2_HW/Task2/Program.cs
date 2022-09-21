@@ -7,7 +7,7 @@ void getThirdDigitFromNumber(int number)
 {
     if (number < 100)
     {
-        Console.WriteLine("третьей цифры нет");
+        Console.WriteLine("Третьей цифры нет.");
     }
     else
     {
@@ -15,10 +15,10 @@ void getThirdDigitFromNumber(int number)
         {
             number /= 10;
         }
-        Console.WriteLine(number % 10);
+        Console.WriteLine($"Третья цифра: {number % 10}.");
     }
 }
 
-int randomNumber = new Random().Next(1, 10000);
-Console.WriteLine(randomNumber);
+int randomNumber = new Random().Next(1, 1000);
+Console.WriteLine($"Случайное число: {randomNumber}.");
 getThirdDigitFromNumber(randomNumber);

@@ -5,4 +5,5 @@
 
 int randomNumber = new Random().Next(100, 1000);
 int secondDigit = randomNumber % 100 / 10;
-Console.WriteLine($"Случайное число {randomNumber}. Вторая цифра {secondDigit}.");
+Console.WriteLine($"Случайное число: {randomNumber}.");
+Console.WriteLine($"Вторая цифра: {secondDigit}.");
