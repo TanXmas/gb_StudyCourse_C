@@ -5,17 +5,16 @@
 
 void getThirdDigitFromNumber(int number)
 {
-    while (number > Math.Pow(10,3))
-    {
-        number /= 10;
-    }
-    
-    if (number < Math.Pow(10,2))
+    if (number < 100)
     {
         Console.WriteLine("третьей цифры нет");
     }
     else
     {
+        while (number > 1000)
+        {
+            number /= 10;
+        }
         Console.WriteLine(number % 10);
     }
 }
