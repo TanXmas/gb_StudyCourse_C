@@ -5,16 +5,17 @@
 
 int getNumberFromUser(int digitNumber)
 {
-    int result = 0;
-    while (result == 0)
+    int number = 0;
+    while (number == 0)
     {
         Console.Write("Введите целое пятизначное число: ");
-        int.TryParse(Console.ReadLine(), out result);
-        if (result != 0 && (result < (int) Math.Pow(10,digitNumber-1) | result >= (int) Math.Pow(10,digitNumber)))
-            result = 0;
+        int.TryParse(Console.ReadLine(), out number);
+        if (number != 0 && (number < (int) Math.Pow(10,digitNumber-1) | number >= (int) Math.Pow(10,digitNumber)))
+            number = 0;
     }
-    return result;
+    return number;
 }
+
 
 bool checkPalindrome(int number, int digitNumber)
 {
@@ -29,6 +30,7 @@ bool checkPalindrome(int number, int digitNumber)
     }
     return palindrome;   
 }
+
 
 int digitNumber = 5;
 int number = getNumberFromUser(digitNumber);

@@ -32,7 +32,7 @@ double getDistance(int[] a, int[] b)
     int len = a.Length;
     int sumOfSquares = 0;
     for (int i = 0; i < len; i++)
-            sumOfSquares += (int) Math.Pow(b[i]-a[i],2);
+        sumOfSquares += (int) Math.Pow(b[i]-a[i],2);
     return Math.Sqrt(sumOfSquares);
 }
 
