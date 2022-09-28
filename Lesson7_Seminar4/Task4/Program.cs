@@ -16,8 +16,13 @@ void fillArray(int[] collection)
 void printArray (int[] collection)
 {
     int len = collection.Length;
+    Console.Write("[");
     for (int i = 0; i < len; i ++)
-        Console.Write($"{collection[i]} ");
+    {
+        Console.Write($"{collection[i]}");
+        if (i < len-1) Console.Write(", ");
+    }
+    Console.Write("]");
 }
 
 
