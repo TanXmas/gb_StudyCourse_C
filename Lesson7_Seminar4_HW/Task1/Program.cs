@@ -19,6 +19,7 @@ int getNumberFromUser(string infoForUser)
 void getPow(int number, int pow)
 {
     int result = number;
+    if (pow == 0) result = 1;
     for (int i = 2; i <= pow; i++)
         result *= number; 
     Console.WriteLine($"Число {number} в степени {pow} = {result}");
