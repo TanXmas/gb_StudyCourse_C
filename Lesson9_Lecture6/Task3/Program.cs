@@ -1,6 +1,4 @@
-﻿/*  */
-
-int getFactorial(int n)
+﻿int getFactorial(int n)
 {
     if (n == 0) 
         return 1;

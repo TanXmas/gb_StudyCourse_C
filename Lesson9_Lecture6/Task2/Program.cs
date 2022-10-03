@@ -1,6 +1,4 @@
-﻿/*  */
-
-void printMatrix(int[,] matrix)
+﻿void printMatrix(int[,] matrix)
 {
     for (int r = 0; r < matrix.GetLength(0); r++)
     {
@@ -57,7 +55,6 @@ void fillImage(int r, int c)
     }
 
 }
-
 
 fillImage(13,3);
 printMatrix(pic);

@@ -1,5 +1,4 @@
-﻿
-int getFibonacci(int n)
+﻿int getFibonacci(int n)
 {
     if (n == 1 || n == 2) return 1;
     else return getFibonacci(n-1) + getFibonacci(n - 2);

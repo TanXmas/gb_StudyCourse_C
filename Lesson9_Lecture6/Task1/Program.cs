@@ -1,6 +1,4 @@
-﻿/*  */
-
-void printMatrix(int[,] matrix)
+﻿void printMatrix(int[,] matrix)
 {
     for (int r = 0; r < matrix.GetLength(0); r++)
     {
