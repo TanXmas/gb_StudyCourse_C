@@ -11,7 +11,8 @@ int getNumberFromUser(string infoForUser)
         Console.Write(infoForUser);
         string userLine = Console.ReadLine();
         int.TryParse(userLine, out number);
-        if (userLine == "0") break;
+        if (userLine == "0")
+            break;
     }
     return number;
 }
