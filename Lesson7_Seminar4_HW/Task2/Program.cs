@@ -3,7 +3,6 @@
 82 -> 10
 9012 -> 12 */
 
-
 int getNumberFromUser(string infoForUser)
 {
     int number = 0;
@@ -17,7 +16,6 @@ int getNumberFromUser(string infoForUser)
     return number;
 }
 
-
 int getSumNumberOfDigits(int number)
 {
     int result = 0;
@@ -28,7 +26,6 @@ int getSumNumberOfDigits(int number)
     }
     return result;
 }
-
 
 int number = getNumberFromUser("Введите натуральное число: ");
 int sumNumberOfDigits = getSumNumberOfDigits(number);

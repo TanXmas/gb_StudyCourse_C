@@ -57,4 +57,3 @@ bool[] getBoolArray(int num)
 int num = new Random().Next(0,10);
 Console.Write($"Число {num} в двоичной системе: ");
 printBinaryNumber(getBoolArray(num));
-

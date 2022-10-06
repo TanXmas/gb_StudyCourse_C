@@ -15,13 +15,11 @@ int getNumberFromUser(string infoForUser)
     return number;
 }
 
-
 void fillArray(int[] array, int len)
 {
     for (int i = 0; i < len; i++)
         array[i] = new Random().Next(1,100);
 }
-
 
 void printArray (int[] array, int len)
 {
@@ -33,7 +31,6 @@ void printArray (int[] array, int len)
     }
     Console.Write("]");
 }
-
 
 int number = getNumberFromUser("Введите натуральное число: ");
 int [] array = new int[number];

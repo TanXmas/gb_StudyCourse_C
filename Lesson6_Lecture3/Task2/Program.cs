@@ -27,6 +27,7 @@ void sortArray(int[] array)
     }
 }
 
+
 int[] arr = {1,5,4,3,2,6,7,1,1};
 sortArray(arr);
 printArray(arr);
