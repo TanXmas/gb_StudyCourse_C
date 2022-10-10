@@ -5,7 +5,6 @@
 8 4 2 4
 Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3. */
 
-
 void print2DArray(int[,] array)
 {
     for (int r = 0; r < array.GetLength(0); r++)
@@ -18,7 +17,6 @@ void print2DArray(int[,] array)
     }
 }
 
-
 void fill2DArray(int[,] array)
 {
     for (int r = 0; r < array.GetLength(0); r++)
@@ -29,7 +27,6 @@ void fill2DArray(int[,] array)
         }
     }
 }
-
 
 void getAverageRow(int[,] array)
 {

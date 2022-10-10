@@ -4,7 +4,6 @@ m = 3, n = 4.
 1 -3,3 8 -9,9
 8 7,8 -7,1 9 */
 
-
 void print2DArray(double[,] array)
 {
     for (int r = 0; r < array.GetLength(0); r++)
@@ -17,7 +16,6 @@ void print2DArray(double[,] array)
     }
 }
 
-
 void fill2DArray(double[,] array)
 {
     for (int r = 0; r < array.GetLength(0); r++)
@@ -29,9 +27,8 @@ void fill2DArray(double[,] array)
     }
 }
 
-
-int m = new Random().Next(1, 6);
-int n = new Random().Next(1, 6);
+int m = new Random().Next(2, 10);
+int n = new Random().Next(2, 10);
 Console.WriteLine($"m = {m}, n = {n}");
 double[,] array = new double[m, n];
 fill2DArray(array);

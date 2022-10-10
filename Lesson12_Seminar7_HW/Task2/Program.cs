@@ -1,7 +1,6 @@
 ﻿/* Напишите программу, которая на вход принимает позицию элемента в двумерном массиве, 
    и возвращает значение этого элемента или же указание, что такого элемента нет. */
 
-
 void print2DArray(int[,] array)
 {
     for (int r = 0; r < array.GetLength(0); r++)
@@ -14,7 +13,6 @@ void print2DArray(int[,] array)
     }
 }
 
-
 void fill2DArray(int[,] array)
 {
     for (int r = 0; r < array.GetLength(0); r++)
@@ -26,7 +24,6 @@ void fill2DArray(int[,] array)
     }
 }
 
-
 int getNumberFromUser(string infoForUser)
 {
     int number = 0;
@@ -36,10 +33,10 @@ int getNumberFromUser(string infoForUser)
         string userLine = Console.ReadLine();
         int.TryParse(userLine, out number);
         if (userLine == "0") break;
+        if (number < 0) number = 0;
     }
     return number;
 }
-
 
 void getValueFrom2DArrayByNumber(int[,] array, int number)
 {
@@ -48,9 +45,8 @@ void getValueFrom2DArrayByNumber(int[,] array, int number)
     if (number > r * c - 1)
         Console.WriteLine($"{number} - такого числа в массиве нет");
     else
-        Console.WriteLine(array[number/c, number%c]);
+        Console.WriteLine(array[number / c, number % c]);
 }
-
 
 int r = new Random().Next(2, 10);
 int c = new Random().Next(2, 10);
