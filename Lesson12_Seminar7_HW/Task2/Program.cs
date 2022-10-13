@@ -45,7 +45,7 @@ void getValueFrom2DArrayByNumber(int[,] array, int number)
     if (number > r * c - 1)
         Console.WriteLine($"{number} - такого числа в массиве нет");
     else
-        Console.WriteLine(array[number / c, number % c]);
+        Console.WriteLine(array[number/c, number%c]);
 }
 
 int r = new Random().Next(2, 10);

@@ -47,6 +47,7 @@ void getAverageRow(int[,] array)
     }
 }
 
+
 int r = new Random().Next(2, 10);
 int c = new Random().Next(2, 10);
 int[,] array = new int[r, c];
