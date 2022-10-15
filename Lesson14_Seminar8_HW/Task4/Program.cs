@@ -42,9 +42,7 @@ void print3DArray(int[,,] array)
 void fill3DArray(int[,,] array, int[] arrayRange)
 {
     if (array.GetLength(0) * array.GetLength(1) * array.GetLength(2) > arrayRange.Length)
-    {
         Console.WriteLine("Размер массива больше количество двузначных чисел.");
-    }
     else
     {
         int index = 0;
@@ -61,7 +59,6 @@ void fill3DArray(int[,,] array, int[] arrayRange)
         }
     }
 }
-
 
 int[] arrayRange = Enumerable.Range(10, 90).ToArray();
 mixArray(arrayRange);

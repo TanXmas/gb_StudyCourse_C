@@ -45,8 +45,8 @@ int getIndexRowWithMinSum(int[,] array)
 }
 
 
-int rows = new Random().Next(2, 10);
-int columns = new Random().Next(2, 10);
+int rows = new Random().Next(2, 5);
+int columns = new Random().Next(2, 4);
 Console.WriteLine($"Массив {rows} х {columns}");
 int[,] array = new int[rows, columns];
 fill2DArray(array);

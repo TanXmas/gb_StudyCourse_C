@@ -29,11 +29,8 @@ void multiply2DArray(int[,] arrayA, int[,] arrayB)
     int cA = arrayA.GetLength(1);
     int rB = arrayB.GetLength(0);
     int cB = arrayB.GetLength(1);
-
     if (cA != rB)
-    {
         Console.WriteLine("Невозможно найти произведение матриц.");
-    }
     else
     {
         int item = 0;
@@ -44,9 +41,7 @@ void multiply2DArray(int[,] arrayA, int[,] arrayB)
                 {
                     item = 0;
                     for (int k = 0; k < cA; k++)
-                    {
                         item += arrayA[i, k] * arrayB[k, j];
-                    }
                     multArray[i, j] = item;
                 }
             }

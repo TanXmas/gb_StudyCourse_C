@@ -31,6 +31,7 @@ void printArray(string[] array)
         Console.WriteLine(item);
 }
 
+
 void fillTriangular(string[] triangular)
 {
     int num = triangular.Length;
