@@ -20,7 +20,7 @@
 ___
 <br>
 
-Первоначальный массив **arrayInput** 
+Первоначальный массив **arrayInput** (пусть будет задан на старте выполнения алгоритма).
 
 ```c#
 string[] arrayInput = new string[]{"Hello", "world", "!", ":-)", "1234", "-2", "computer science", "RU", "Russia"};
@@ -35,7 +35,7 @@ string[] arrayOutput = new string[arrayInput.Length];
 ```c#
 void fillArrayOut (string[] arrayIn, string[] arrayOut)
 {
-    // Цикл по строкам из первоначального массива
+    // Цикл по элементам (строкам) первоначального массива
     for (int i = 0; i < arrayIn.Length; i++)
     {
         // Проверка длины строки
@@ -53,9 +53,9 @@ void printArray (string[] array)
 {  
     // Формат вывода как в примерах - массив в []
     Console.Write("[");
-    // В переменной prev хранится индекс предыдущей не пустой строки
+    // В переменной prev хранится индекс предыдущого не пустого элемента (строки)
     int prev = -1;
-    // Цикл по строкам массива
+    // Цикл по элементам (строкам) массива
     for (int i = 0; i < array.Length; i ++)
     {
         // Проверка, что строка не пустая
