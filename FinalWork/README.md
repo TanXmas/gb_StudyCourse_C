@@ -26,25 +26,27 @@ ___
 string[] arrayInput = new string[]{"Hello", "world", "!", ":-)", "1234", "-2", "computer science", "RU", "Russia"};
 ```
 
-Пустой целевой массив **arrayOutput** такой же длинны, как **arrayInput**.
+Функция заполнения целевого массива из **arrayInput** строками, длина которых меньше либо равна 3 символа.
 ```c#
-string[] arrayOutput = new string[arrayInput.Length];
-```
-
-Функция заполнения **arrayOutput** из массива **arrayInput** строками, длина которых меньше либо равна 3 символа.
-```c#
-void fillArrayOut (string[] arrayIn, string[] arrayOut)
+string[] fillArrayOut (string[] arrayIn)
 {
+    // Пустой целевой массив
+    string[] arrayOut = new string[0];
+    // Индекс для целевого массива
+    int j = 0;
     // Цикл по элементам (строкам) первоначального массива
     for (int i = 0; i < arrayIn.Length; i++)
     {
         // Проверка длины строки
         if (arrayIn[i].Length <= 3)
         {
-            // Присвоение выбранного элемента в целевом массиве
-            arrayOut[i] = arrayIn[i];
+            // Изменяем размер целевого массива на +1
+            Array.Resize<string>(ref arrayOut, j+1);
+            arrayOut[j] = arrayIn[i];
+            j++;
         }
     }
+    return arrayOut;
 }
 ```
 
@@ -54,18 +56,12 @@ void printArray (string[] array)
 {  
     // Формат вывода как в примерах - массив в []
     Console.Write("[");
-    // В переменной prev хранится индекс предыдущого не пустого элемента (строки)
-    int prev = -1;
     // Цикл по элементам (строкам) массива
     for (int i = 0; i < array.Length; i ++)
     {
-        // Проверка, что строка не пустая
-        if (!string.IsNullOrEmpty(array[i]))
-            {
-                if (prev > -1) Console.Write(", ");
-                Console.Write(array[i]);
-                prev = i;
-            }
+        Console.Write(array[i]);
+        // Если строка не последняя, то добавляем ","
+        if (i < array.Length-1) Console.Write(", ");
     }
     Console.WriteLine("]");
 }
