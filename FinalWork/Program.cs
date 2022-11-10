@@ -28,5 +28,4 @@ string[] fillArrayOut (string[] arrayIn)
 
 
 string[] arrayInput = new string[]{"Hello", "world", "!", ":-)", "1234", "-2", "computer science", "RU", "Russia"};
-string[] arrayOutput = fillArrayOut(arrayInput);
-printArray(arrayOutput);
+printArray(fillArrayOut(arrayInput));
