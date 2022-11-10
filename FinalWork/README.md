@@ -26,7 +26,7 @@ ___
 string[] arrayInput = new string[]{"Hello", "world", "!", ":-)", "1234", "-2", "computer science", "RU", "Russia"};
 ```
 
-Пустой массив **arrayOutput** такой же длинны, как **arrayInput**.
+Пустой целевой массив **arrayOutput** такой же длинны, как **arrayInput**.
 ```c#
 string[] arrayOutput = new string[arrayInput.Length];
 ```
@@ -41,6 +41,7 @@ void fillArrayOut (string[] arrayIn, string[] arrayOut)
         // Проверка длины строки
         if (arrayIn[i].Length <= 3)
         {
+            // Присвоение выбранного элемента в целевом массиве
             arrayOut[i] = arrayIn[i];
         }
     }

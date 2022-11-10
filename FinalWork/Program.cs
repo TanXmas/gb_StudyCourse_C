@@ -1,34 +1,32 @@
 ﻿void printArray (string[] array)
 {  
-    int len = array.Length;
-    int prev = -1;
     Console.Write("[");
-    for (int i = 0; i < len; i ++)
+    for (int i = 0; i < array.Length; i ++)
     {
-        if (!string.IsNullOrEmpty(array[i]))
-            {
-                if (prev > -1) Console.Write(", ");
-                Console.Write(array[i]);
-                prev = i;
-            }
+        Console.Write(array[i]);
+        if (i < array.Length-1) Console.Write(", ");
     }
     Console.WriteLine("]");
 }
 
 
-void fillArrayOut (string[] arrayIn, string[] arrayOut)
+string[] fillArrayOut (string[] arrayIn)
 {
+    string[] arrayOut = new string[0];
+    int j = 0;
     for (int i = 0; i < arrayIn.Length; i++)
     {
         if (arrayIn[i].Length <= 3)
         {
-            arrayOut[i] = arrayIn[i];
+            Array.Resize<string>(ref arrayOut, j+1);
+            arrayOut[j] = arrayIn[i];
+            j++;
         }
     }
+    return arrayOut;
 }
 
 
 string[] arrayInput = new string[]{"Hello", "world", "!", ":-)", "1234", "-2", "computer science", "RU", "Russia"};
-string[] arrayOutput = new string[arrayInput.Length];
-fillArrayOut(arrayInput, arrayOutput);
+string[] arrayOutput = fillArrayOut(arrayInput);
 printArray(arrayOutput);
