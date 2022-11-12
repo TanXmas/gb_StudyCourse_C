@@ -1,16 +1,4 @@
-﻿void printArray (string[] array)
-{  
-    Console.Write("[");
-    for (int i = 0; i < array.Length; i ++)
-    {
-        Console.Write(array[i]);
-        if (i < array.Length-1) Console.Write(", ");
-    }
-    Console.WriteLine("]");
-}
-
-
-string[] fillArrayOut (string[] arrayIn)
+﻿string[] fillArrayOut (string[] arrayIn)
 {
     string[] arrayOut = new string[0];
     int j = 0;
@@ -28,4 +16,4 @@ string[] fillArrayOut (string[] arrayIn)
 
 
 string[] arrayInput = new string[]{"Hello", "world", "!", ":-)", "1234", "-2", "computer science", "RU", "Russia"};
-printArray(fillArrayOut(arrayInput));
+Console.WriteLine($"[{string.Join(", ", fillArrayOut(arrayInput))}]");
