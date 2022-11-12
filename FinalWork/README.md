@@ -40,29 +40,15 @@ string[] fillArrayOut (string[] arrayIn)
         // Проверка длины строки
         if (arrayIn[i].Length <= 3)
         {
-            // Изменяем размер целевого массива на +1
+            // Изменение размера целевого массива на +1
             Array.Resize<string>(ref arrayOut, j+1);
+            // Присвоение выбранного элемента (строки) в целевом массиве
             arrayOut[j] = arrayIn[i];
+            // Следующий элемент (строка) в целевом массиве
             j++;
         }
     }
+    // Функция возвращает заполненный целевой массив
     return arrayOut;
-}
-```
-
-Функция вывода результата в терминал.
-```c#
-void printArray (string[] array)
-{  
-    // Формат вывода как в примерах - массив в []
-    Console.Write("[");
-    // Цикл по элементам (строкам) массива
-    for (int i = 0; i < array.Length; i ++)
-    {
-        Console.Write(array[i]);
-        // Если строка не последняя, то добавляем ","
-        if (i < array.Length-1) Console.Write(", ");
-    }
-    Console.WriteLine("]");
 }
 ```
